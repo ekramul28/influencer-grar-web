@@ -50,12 +50,29 @@ nav ul a {
 }
 
 /* banner section style  */
-.banner-section {
+/* .banner-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 120px;
+    margin: 60px 120px;
 
+} */
+.banner-section {
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px 120px;
+    display: grid;
+    grid-template-areas:
+        "head img"
+
+}
+
+.banner-description {
+    grid-area: head;
+}
+
+.banner-img-div {
+    grid-area: img;
 }
 
 .banner-header {
@@ -88,3 +105,133 @@ nav ul a {
     width: 475px;
     height: 475px;
 }
+
+/* sponsor section  */
+.sponsors-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 20px;
+    background: #FFF;
+}
+
+
+.hide {
+    display: none;
+}
+
+/* card style  */
+.card-section {
+    margin: 30px 170px;
+
+}
+
+.popular-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.popular-header {
+    color: #3A3A3A;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    width: 329px;
+    height: 476px;
+    padding: 15px;
+}
+
+.card-img {
+    width: 300px;
+    height: 256px;
+    border-radius: 5px;
+}
+
+.card-para {
+    margin: 10px 0px;
+}
+
+.see-more {
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: end;
+    margin-top: 40px;
+}
+
+
+
+
+/* mobile divise  */
+@media screen and (max-width:576px) {
+    .header {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 20px;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    /* banner  */
+    .banner-section {
+        grid-template-areas:
+            "img"
+            "head";
+        margin: 20px 20px;
+    }
+
+    .banner-description {
+        text-align: center;
+    }
+
+    .banner-img-div {
+        text-align: center;
+    }
+
+    .banner-img {
+        width: 202px;
+        height: 190px;
+
+    }
+
+    .sponsors-img-container {
+        flex-wrap: wrap;
+    }
+
+    /* card */
+    .popular-collection {
+        grid-template-columns: 1fr;
+
+
+    }
+
+    .card {
+        margin: auto;
+    }
+
+    .card-section {
+        margin: 10px;
+    }
+
+
+}
+
+
+
+/* medium divise */
+@media screen and (min-width:576px) and (max-width:960px) {}
